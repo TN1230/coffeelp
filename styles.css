@@ -1,0 +1,61 @@
+body {
+    font-family: 'Inter', sans-serif;
+    color: #333;
+    /* 共通の背景画像に80%不透明の白を重ね、透過度を20%に調整 */
+    background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('/image/back-ground.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* 背景を固定 */
+}
+
+.hero-bg {
+    /* 新しいファーストビュー用の画像を背景に設定 */
+    background-image: url('/image/first-view.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+.animate-pulse-light {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes badge-wiggle {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    75% { transform: rotate(-5deg); }
+}
+
+.badge-wiggle-animation {
+    animation: badge-wiggle 0.5s ease-in-out infinite alternate;
+}
+.premium-card:hover .badge-wiggle-animation {
+    animation-play-state: running;
+}
+.premium-card:not(:hover) .badge-wiggle-animation {
+    animation-play-state: paused;
+}
+
+.glow-border {
+    box-shadow: 0 0 15px rgba(255, 165, 0, 0.7);
+    transition: all 0.3s ease-in-out;
+}
+
+.premium-card:hover .glow-border {
+    box-shadow: 0 0 30px rgba(255, 165, 0, 1), 0 0 50px rgba(255, 165, 0, 0.5);
+    transform: scale(1.03);
+}
+
+/* Specific style for header paragraph for better readability */
+header p {
+    color: rgba(255, 255, 255, 0.9); /* A slightly transparent white for readability */
+}
+
+/* Specific font for the main headline */
+header h1 {
+    font-family: 'Noto Serif JP', serif;
+}
+
