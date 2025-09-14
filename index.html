@@ -15,12 +15,9 @@
 </head>
 <body class="overflow-x-hidden">
 
-    <!-- ヒーローヘッダー (画像背景) -->
+    <!-- ヒーローヘッダー -->
     <header class="relative h-screen w-full flex items-center justify-center text-white text-center p-4 overflow-hidden">
-        <!-- 背景画像 -->
         <img src="image/first-view.jpg" alt="コーヒーを淹れている風景" class="absolute top-0 left-0 z-0 w-full h-full object-cover">
-
-        <!-- コンテンツ -->
         <div class="relative z-10 bg-black bg-opacity-40 p-6 sm:p-12 rounded-xl backdrop-blur-sm mx-4" data-aos="fade-up">
             <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight drop-shadow-lg">
                 毎月届く、あなただけのクラフトコーヒー
@@ -39,7 +36,7 @@
         <!-- 取り扱い豆の紹介セクション -->
         <section>
             <div class="text-center mb-12 sm:mb-24">
-                <h2 class="text-3xl sm:text-4xl font-bold text-gray-800" data-aos="fade-up">世界が認める、一握りのコーヒー豆</h2>
+                <h2 class="section-heading text-3xl sm:text-4xl font-bold text-gray-800" data-aos="fade-up">世界が認める、一握りのコーヒー豆</h2>
                 <p class="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto mt-4" data-aos="fade-up" data-aos-delay="100">
                     私たちが取り扱うのは、全生産量のわずか5%ほどしか存在しない「スペシャルティコーヒー」のみ。農園からカップ一杯に至るまで、徹底的に品質管理された豆だけが持つ、豊かな風味と個性をお届けします。
                 </p>
@@ -82,45 +79,48 @@
         </section>
 
         <!-- 私たちの3つの約束 (詳細版) -->
-        <section class="mt-16 sm:mt-24 space-y-16 sm:space-y-24">
-            <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 text-center" data-aos="fade-up">私たちが約束すること</h2>
-
-            <!-- 約束1: 鮮度 -->
-            <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12" data-aos="fade-right">
-                <div class="md:w-1/2">
-                    <img src="image/brand-story1.jpg" alt="焙煎したてのコーヒー豆" class="rounded-xl shadow-lg w-full">
-                </div>
-                <div class="md:w-1/2">
-                    <h3 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-4">1. 究極の鮮度を</h3>
-                    <p class="text-lg text-gray-600 leading-relaxed">
-                        コーヒーが最も香り高いのは、焙煎直後のわずかな期間だけ。私たちはその「最高の瞬間」をあなたの元へ届けるため、ご注文をいただいてから焙煎し、48時間以内に出荷することを徹底しています。袋を開けた瞬間に広がる、本物の香りをお楽しみください。
-                    </p>
-                </div>
+        <section class="mt-16 sm:mt-24">
+            <div class="text-center">
+                <h2 class="section-heading text-3xl sm:text-4xl font-bold text-gray-800 text-center" data-aos="fade-up">私たちが約束すること</h2>
             </div>
+            <div class="space-y-16 sm:space-y-24 mt-12 sm:mt-24">
+                <!-- 約束1: 鮮度 -->
+                <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12" data-aos="fade-right">
+                    <div class="md:w-1/2">
+                        <img src="image/brand-story1.jpg" alt="焙煎したてのコーヒー豆" class="rounded-xl shadow-lg w-full">
+                    </div>
+                    <div class="md:w-1/2">
+                        <h3 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-4">1. 究極の鮮度を</h3>
+                        <p class="text-lg text-gray-600 leading-relaxed">
+                            コーヒーが最も香り高いのは、焙煎直後のわずかな期間だけ。私たちはその「最高の瞬間」をあなたの元へ届けるため、ご注文をいただいてから焙煎し、48時間以内に出荷することを徹底しています。袋を開けた瞬間に広がる、本物の香りをお楽しみください。
+                        </p>
+                    </div>
+                </div>
 
-            <!-- 約束2: 品質 -->
-            <div class="flex flex-col md:flex-row-reverse items-center gap-8 md:gap-12" data-aos="fade-left">
-                <div class="md:w-1/2">
-                     <img src="image/brand-story2.jpg" alt="厳選されたスペシャルティコーヒー" class="rounded-xl shadow-lg w-full">
+                <!-- 約束2: 品質 -->
+                <div class="flex flex-col md:flex-row-reverse items-center gap-8 md:gap-12" data-aos="fade-left">
+                    <div class="md:w-1/2">
+                         <img src="image/brand-story2.jpg" alt="厳選されたスペシャルティコーヒー" class="rounded-xl shadow-lg w-full">
+                    </div>
+                    <div class="md:w-1/2">
+                        <h3 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-4">2. 確かな品質を</h3>
+                        <p class="text-lg text-gray-600 leading-relaxed">
+                            お届けするのは、世界の産地から厳選されたスペシャルティコーヒー豆のみ。経験豊富な焙煎士が、豆の持つ個性やストーリーを最大限に引き出す焙煎を施します。大量生産では決して味わえない、一杯ごとの繊細な違いをご堪能いただけます。
+                        </p>
+                    </div>
                 </div>
-                <div class="md:w-1/2">
-                    <h3 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-4">2. 確かな品質を</h3>
-                    <p class="text-lg text-gray-600 leading-relaxed">
-                        お届けするのは、世界の産地から厳選されたスペシャルティコーヒー豆のみ。経験豊富な焙煎士が、豆の持つ個性やストーリーを最大限に引き出す焙煎を施します。大量生産では決して味わえない、一杯ごとの繊細な違いをご堪能いただけます。
-                    </p>
-                </div>
-            </div>
 
-            <!-- 約束3: 体験 -->
-            <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12" data-aos="fade-right">
-                <div class="md:w-1/2">
-                     <img src="image/brand-story3.jpg" alt="コーヒーを楽しむ体験" class="rounded-xl shadow-lg w-full">
-                </div>
-                <div class="md:w-1/2">
-                    <h3 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-4">3. 心豊かな体験を</h3>
-                    <p class="text-lg text-gray-600 leading-relaxed">
-                        私たちはただコーヒー豆を売るのではありません。同封されるストーリーカードには、豆の産地や焙煎士の想いが綴られています。一杯のコーヒーの背景にある物語を知ることで、いつものコーヒータイムがより深く、心豊かな時間に変わる。そんな体験をお約束します。
-                    </p>
+                <!-- 約束3: 体験 -->
+                <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12" data-aos="fade-right">
+                    <div class="md:w-1/2">
+                         <img src="image/brand-story3.jpg" alt="コーヒーを楽しむ体験" class="rounded-xl shadow-lg w-full">
+                    </div>
+                    <div class="md:w-1/2">
+                        <h3 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-4">3. 心豊かな体験を</h3>
+                        <p class="text-lg text-gray-600 leading-relaxed">
+                            私たちはただコーヒー豆を売るのではありません。同封されるストーリーカードには、豆の産地や焙煎士の想いが綴られています。一杯のコーヒーの背景にある物語を知ることで、いつものコーヒータイムがより深く、心豊かな時間に変わる。そんな体験をお約束します。
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -179,14 +179,14 @@
                 <!-- プレミアムプラン -->
                 <div class="relative bg-white rounded-2xl shadow-2xl p-8 w-full max-w-sm lg:scale-110 lg:z-10 border-4 border-orange-500 premium-card transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
                     <div class="absolute -top-4 -right-4 bg-red-500 text-white text-xs font-bold px-4 py-2 rounded-full transform rotate-12 badge-wiggle-animation">
-                        人気No.1
+                        人気
                     </div>
                     <h3 class="text-2xl font-bold text-gray-800 mb-2">プレミアムプラン</h3>
                     <p class="text-base text-gray-500">最高のコーヒー体験を求めるあなたへ</p>
                     <p class="text-5xl font-extrabold text-orange-500 mt-4">
                         ¥4,980<span class="text-lg text-gray-500 font-normal">/月</span>
                     </p>
-                    <p class="text-sm text-gray-400 mt-1">1杯あたり約120円 <span class="font-bold text-red-500">(一番お得！)</span></p>
+                    <p class="text-sm text-gray-400 mt-1">1杯あたり約120円 <span class="font-bold text-red-500">(お得！)</span></p>
                     <ul class="text-left mt-6 space-y-3 text-gray-700">
                         <li><span class="text-orange-500 font-bold mr-2">✓</span> 200g × 4種類 (計800g)</li>
                         <li><span class="text-orange-500 font-bold mr-2">✓</span> 初回送料無料</li>
@@ -301,3 +301,4 @@
     </script>
 </body>
 </html>
+
