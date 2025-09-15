@@ -1,28 +1,27 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" style="scroll-behavior: smooth;">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Real Dynamic クラフトコーヒー</title>
+    <!-- ファビコンの追加 -->
+    <link rel="icon" href="/fav/favicon.ico">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Serif+JP:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <!-- 外部CSSファイルを読み込み -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="overflow-x-hidden">
 
     <!-- ヒーローヘッダー -->
-    <header class="relative h-screen w-full flex items-center justify-center text-white text-center p-4 overflow-hidden">
-        <img src="image/first-view.jpg" alt="コーヒーを淹れている風景" class="absolute top-0 left-0 z-0 w-full h-full object-cover">
-        <div class="relative z-10 bg-black bg-opacity-40 p-6 sm:p-12 rounded-xl backdrop-blur-sm mx-4" data-aos="fade-up">
+    <header class="hero-bg h-screen w-full flex items-center justify-center text-white text-center p-4">
+        <div class="bg-black bg-opacity-40 p-6 sm:p-12 rounded-xl backdrop-blur-sm mx-4" data-aos="fade-up">
             <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight drop-shadow-lg">
                 毎月届く、あなただけのクラフトコーヒー
             </h1>
-            <p class="mt-4 sm:mt-6 text-lg sm:text-xl md:text-2xl font-medium drop-shadow-md">
+            <p class="mt-4 sm:mt-6 text-base sm:text-xl md:text-2xl font-medium drop-shadow-md">
                 小規模焙煎所から直送される、最高の鮮度と香りを。
             </p>
             <a href="#plans" class="mt-8 sm:mt-12 inline-block px-8 py-4 bg-orange-500 text-white font-bold text-lg rounded-full shadow-lg hover:bg-orange-600 transition-all duration-300 transform hover:scale-105 animate-pulse-light">
@@ -33,139 +32,58 @@
 
     <main class="container mx-auto px-4 py-12 sm:py-24 max-w-7xl">
 
-        <!-- 取り扱い豆の紹介セクション -->
-        <section>
-            <div class="text-center mb-12 sm:mb-24">
-                <h2 class="section-heading text-3xl sm:text-4xl font-bold text-gray-800" data-aos="fade-up">世界が認める、一握りのコーヒー豆</h2>
-                <p class="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto mt-4" data-aos="fade-up" data-aos-delay="100">
-                    私たちが取り扱うのは、全生産量のわずか5%ほどしか存在しない「スペシャルティコーヒー」のみ。農園からカップ一杯に至るまで、徹底的に品質管理された豆だけが持つ、豊かな風味と個性をお届けします。
-                </p>
+        <!-- ブランドストーリー -->
+        <section class="text-center" data-aos="fade-up">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-4">私たちのこだわり</h2>
+            <!-- CSSで画像を読み込むための空のdiv -->
+            <div class="brand-story-image my-8 rounded-xl overflow-hidden shadow-lg max-w-4xl mx-auto" data-aos="zoom-in">
             </div>
-            
-            <div class="space-y-16 sm:space-y-24">
-                <!-- Point 1: Single Origin -->
-                <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12" data-aos="fade-right">
-                    <div class="md:w-1/2">
-                        <img src="image/farm.jpg" alt="コーヒー農園の風景" class="rounded-xl shadow-lg w-full">
-                    </div>
-                    <div class="md:w-1/2">
-                        <h3 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-4">厳選された単一農園</h3>
-                        <p class="text-lg text-gray-600 leading-relaxed">産地ごとの個性を楽しんでいただくため、ブレンドしない単一農園（シングルオリジン）の豆だけを扱います。</p>
-                    </div>
-                </div>
-
-                <!-- Point 2: Sustainable -->
-                <div class="flex flex-col md:flex-row-reverse items-center gap-8 md:gap-12" data-aos="fade-left">
-                    <div class="md:w-1/2">
-                         <img src="image/smile.jpg" alt="サステナブルな栽培法のコーヒー豆" class="rounded-xl shadow-lg w-full">
-                    </div>
-                    <div class="md:w-1/2">
-                        <h3 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-4">サステナブルな栽培法</h3>
-                        <p class="text-lg text-gray-600 leading-relaxed">生産者の生活や自然環境に配慮した、持続可能な方法で栽培された豆を優先的に選んでいます。</p>
-                    </div>
-                </div>
-
-                <!-- Point 3: Quality -->
-                <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12" data-aos="fade-right">
-                    <div class="md:w-1/2">
-                         <img src="image/tasting.jpg" alt="コーヒー豆の品質評価" class="rounded-xl shadow-lg w-full">
-                    </div>
-                    <div class="md:w-1/2">
-                        <h3 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-4">国際基準の品質評価</h3>
-                        <p class="text-lg text-gray-600 leading-relaxed">国際的な評価基準に基づき、カップクオリティが認められた、確かな品質の豆だけを厳選しています。</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 私たちの3つの約束 (詳細版) -->
-        <section class="mt-16 sm:mt-24">
-            <div class="text-center">
-                <h2 class="section-heading text-3xl sm:text-4xl font-bold text-gray-800 text-center" data-aos="fade-up">私たちが約束すること</h2>
-            </div>
-            <div class="space-y-16 sm:space-y-24 mt-12 sm:mt-24">
-                <!-- 約束1: 鮮度 -->
-                <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12" data-aos="fade-right">
-                    <div class="md:w-1/2">
-                        <img src="image/brand-story1.jpg" alt="焙煎したてのコーヒー豆" class="rounded-xl shadow-lg w-full">
-                    </div>
-                    <div class="md:w-1/2">
-                        <h3 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-4">1. 究極の鮮度を</h3>
-                        <p class="text-lg text-gray-600 leading-relaxed">
-                            コーヒーが最も香り高いのは、焙煎直後のわずかな期間だけ。私たちはその「最高の瞬間」をあなたの元へ届けるため、ご注文をいただいてから焙煎し、48時間以内に出荷することを徹底しています。袋を開けた瞬間に広がる、本物の香りをお楽しみください。
-                        </p>
-                    </div>
-                </div>
-
-                <!-- 約束2: 品質 -->
-                <div class="flex flex-col md:flex-row-reverse items-center gap-8 md:gap-12" data-aos="fade-left">
-                    <div class="md:w-1/2">
-                         <img src="image/brand-story2.jpg" alt="厳選されたスペシャルティコーヒー" class="rounded-xl shadow-lg w-full">
-                    </div>
-                    <div class="md:w-1/2">
-                        <h3 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-4">2. 確かな品質を</h3>
-                        <p class="text-lg text-gray-600 leading-relaxed">
-                            お届けするのは、世界の産地から厳選されたスペシャルティコーヒー豆のみ。経験豊富な焙煎士が、豆の持つ個性やストーリーを最大限に引き出す焙煎を施します。大量生産では決して味わえない、一杯ごとの繊細な違いをご堪能いただけます。
-                        </p>
-                    </div>
-                </div>
-
-                <!-- 約束3: 体験 -->
-                <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12" data-aos="fade-right">
-                    <div class="md:w-1/2">
-                         <img src="image/brand-story3.jpg" alt="コーヒーを楽しむ体験" class="rounded-xl shadow-lg w-full">
-                    </div>
-                    <div class="md:w-1/2">
-                        <h3 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-4">3. 心豊かな体験を</h3>
-                        <p class="text-lg text-gray-600 leading-relaxed">
-                            私たちはただコーヒー豆を売るのではありません。同封されるストーリーカードには、豆の産地や焙煎士の想いが綴られています。一杯のコーヒーの背景にある物語を知ることで、いつものコーヒータイムがより深く、心豊かな時間に変わる。そんな体験をお約束します。
-                        </p>
-                    </div>
-                </div>
-            </div>
+            <p class="max-w-3xl mx-auto text-lg leading-relaxed">
+                コーヒーの美味しさを決めるのは「鮮度」です。大規模流通では失われがちな、焙煎したての最高の香りと味わいを、ご自宅にお届けしたい。Real Dynamicは、全国の小規模焙煎所と提携し、ご注文を受けてから丁寧に焙煎・梱包。街の隠れた名店とあなたを繋ぎ、毎日のコーヒータイムを特別な体験に変えます。
+            </p>
         </section>
 
         <!-- サービスの流れ -->
         <section class="mt-16 sm:mt-24 text-center">
-            <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-12" data-aos="fade-up">サービスはたったの3ステップ</h2>
+            <h2 class="text-3xl sm:text-4xl font-bold mb-12" data-aos="fade-up">サービスはたったの3ステップ</h2>
             <div class="flex flex-col md:flex-row justify-center items-start md:space-x-8 space-y-12 md:space-y-0">
                 <div class="flex-1 max-w-sm" data-aos="fade-right">
                     <div class="w-20 h-20 mx-auto bg-orange-100 rounded-full flex items-center justify-center mb-4">
                         <svg class="w-12 h-12 text-orange-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15.5l-5-5 1.41-1.41L11 14.67l7.59-7.59L20 8.5l-9 9z"/></svg>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2 text-gray-800">1. お好みのプランを選ぶ</h3>
-                    <p class="text-base text-gray-600">あなたのライフスタイルに合わせたプランを見つけてください。</p>
+                    <h3 class="text-xl font-semibold mb-2">1. お好みのプランを選ぶ</h3>
+                    <p class="text-sm text-gray-600">あなたのライフスタイルに合わせたプランを見つけてください。</p>
                 </div>
                 <div class="flex-1 max-w-sm" data-aos="fade-up" data-aos-delay="200">
                     <div class="w-20 h-20 mx-auto bg-orange-100 rounded-full flex items-center justify-center mb-4">
                         <svg class="w-12 h-12 text-orange-500" fill="currentColor" viewBox="0 0 24 24"><path d="M22 6h-3.05l-4-4-2.47 2.47L11 5.41V2h-2v4H7V2H5v4H2c-1.1 0-2 .9-2 2v13c0 1.1.9 2 2 2h20c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm0 15H2V8h20v13zm-8-9c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2 2 .9 2 2zm2-7V2h-4v4h4z"/></svg>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2 text-gray-800">2. 毎月ポストに届く</h3>
-                    <p class="text-base text-gray-600">焙煎したての豆を、ご指定の住所へ直接お届けします。</p>
+                    <h3 class="text-xl font-semibold mb-2">2. 毎月ポストに届く</h3>
+                    <p class="text-sm text-gray-600">焙煎したての豆を、ご指定の住所へ直接お届けします。</p>
                 </div>
                 <div class="flex-1 max-w-sm" data-aos="fade-left" data-aos-delay="400">
                     <div class="w-20 h-20 mx-auto bg-orange-100 rounded-full flex items-center justify-center mb-4">
                         <svg class="w-12 h-12 text-orange-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15.5l-5-5 1.41-1.41L11 14.67l7.59-7.59L20 8.5l-9 9z"/></svg>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2 text-gray-800">3. 自宅で淹れるだけ</h3>
-                    <p class="text-base text-gray-600">こだわりの一杯が、あなたの日常を豊かに彩ります。</p>
+                    <h3 class="text-xl font-semibold mb-2">3. 自宅で淹れるだけ</h3>
+                    <p class="text-sm text-gray-600">こだわりの一杯が、あなたの日常を豊かに彩ります。</p>
                 </div>
             </div>
         </section>
 
         <!-- 商品ラインナップ/プラン -->
         <section id="plans" class="mt-16 sm:mt-24 text-center">
-            <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-8" data-aos="fade-up">商品ラインナップ</h2>
+            <h2 class="text-3xl sm:text-4xl font-bold mb-8" data-aos="fade-up">商品ラインナップ</h2>
 
             <div class="flex flex-col lg:flex-row items-center justify-center lg:space-x-8 space-y-8 lg:space-y-0">
                 <!-- スタンダードプラン -->
                 <div class="bg-white rounded-2xl shadow-xl p-8 w-full max-w-xs transition-all duration-300" data-aos="fade-right">
-                    <h3 class="text-2xl font-bold text-gray-800 mb-2">スタンダード</h3>
-                    <p class="text-base text-gray-500">まずは試したい方に</p>
+                    <h3 class="text-2xl font-bold mb-2">スタンダード</h3>
+                    <p class="text-sm text-gray-500">まずは試したい方に</p>
                     <p class="text-4xl font-extrabold text-orange-500 mt-4">
                         ¥2,980<span class="text-base text-gray-500 font-normal">/月</span>
                     </p>
-                    <p class="text-sm text-gray-400 mt-1">1杯あたり約150円</p>
+                    <p class="text-xs text-gray-400 mt-1">1杯あたり約150円</p>
                     <ul class="text-left mt-6 space-y-2 text-gray-700">
                         <li><span class="text-orange-500 font-bold">✓</span> 200g × 2種類 (計400g)</li>
                         <li><span class="text-orange-500 font-bold">✓</span> 初回送料無料</li>
@@ -177,72 +95,73 @@
                 </div>
 
                 <!-- プレミアムプラン -->
-                <div class="relative bg-white rounded-2xl shadow-2xl p-8 w-full max-w-sm lg:scale-110 lg:z-10 border-4 border-orange-500 premium-card transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+                <div class="relative bg-white rounded-2xl shadow-xl p-8 w-full max-w-sm lg:scale-110 lg:z-10 border-4 border-orange-500 premium-card transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
                     <div class="absolute -top-4 -right-4 bg-red-500 text-white text-xs font-bold px-4 py-2 rounded-full transform rotate-12 badge-wiggle-animation">
-                        人気
+                        人気No.1
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-800 mb-2">プレミアムプラン</h3>
-                    <p class="text-base text-gray-500">最高のコーヒー体験を求めるあなたへ</p>
+                    <h3 class="text-2xl font-bold mb-2">プレミアム</h3>
+                    <p class="text-sm text-gray-500">毎月の新しい出会いを楽しみたい方に</p>
                     <p class="text-5xl font-extrabold text-orange-500 mt-4">
                         ¥4,980<span class="text-lg text-gray-500 font-normal">/月</span>
                     </p>
-                    <p class="text-sm text-gray-400 mt-1">1杯あたり約120円 <span class="font-bold text-red-500">(お得！)</span></p>
-                    <ul class="text-left mt-6 space-y-3 text-gray-700">
-                        <li><span class="text-orange-500 font-bold mr-2">✓</span> 200g × 4種類 (計800g)</li>
-                        <li><span class="text-orange-500 font-bold mr-2">✓</span> 初回送料無料</li>
-                        <li><span class="text-orange-500 font-bold mr-2">✓</span> 毎月新しい豆との出会い</li>
-                        <li class="font-bold text-orange-600"><span class="text-orange-500 font-bold mr-2">✓</span> 初回限定ドリップバッグおまけ</li>
-                        <li class="font-bold text-orange-600"><span class="text-orange-500 font-bold mr-2">✓</span> 焙煎士の限定コラム配信</li>
+                    <p class="text-xs text-gray-400 mt-1">1杯あたり約120円</p>
+                    <ul class="text-left mt-6 space-y-2 text-gray-700">
+                        <li><span class="text-orange-500 font-bold">✓</span> 200g × 4種類 (計800g)</li>
+                        <li><span class="text-orange-500 font-bold">✓</span> 初回送料無料</li>
+                        <li><span class="text-orange-500 font-bold">✓</span> 毎月新しい豆との出会い</li>
+                        <li class="font-bold text-orange-600"><span class="text-orange-500 font-bold">✓</span> 初回限定ドリップバッグおまけ</li>
                     </ul>
                     <a href="#" class="mt-8 inline-block w-full py-3 bg-orange-500 text-white font-bold rounded-lg shadow-lg hover:bg-orange-600 transition-all duration-300 transform hover:scale-105">
-                        このプランを選ぶ
+                        今すぐ始める
                     </a>
                 </div>
             </div>
         </section>
 
+        <!-- ライフスタイル写真/動画 -->
+        <section class="mt-16 sm:mt-24 text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-8" data-aos="fade-up">コーヒーが暮らしを変える</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- CSSで画像を読み込むための空のdiv -->
+                <div class="lifestyle-image-1 rounded-xl overflow-hidden shadow-lg" data-aos="zoom-in" data-aos-delay="100"></div>
+                <div class="lifestyle-image-2 rounded-xl overflow-hidden shadow-lg" data-aos="zoom-in" data-aos-delay="200"></div>
+                <div class="lifestyle-image-3 rounded-xl overflow-hidden shadow-lg" data-aos="zoom-in" data-aos-delay="300"></div>
+            </div>
+        </section>
+
         <!-- お客様の声 -->
         <section class="mt-16 sm:mt-24 text-center">
-            <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-8" data-aos="fade-up">お客様の声</h2>
+            <h2 class="text-3xl sm:text-4xl font-bold mb-8" data-aos="fade-up">お客様の声</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-orange-50 rounded-xl shadow-md p-9 flex flex-col" data-aos="fade-up">
-                    <p class="text-base font-light italic text-gray-600 flex-grow">
+                <div class="bg-white rounded-xl shadow-md p-6" data-aos="fade-up">
+                    <p class="text-sm font-light italic text-gray-600">
                         "毎朝の習慣が変わりました！新しい豆が届くのが楽しみで、毎朝ワクワクしながら起きています。"
                     </p>
-                    <footer class="mt-4 text-right">
-                        <p class="font-semibold text-gray-800">- 30代 女性</p>
-                    </footer>
                 </div>
-                <div class="bg-orange-50 rounded-xl shadow-md p-9 flex flex-col" data-aos="fade-up" data-aos-delay="100">
-                    <p class="text-base font-light italic text-gray-600 flex-grow">
+                <div class="bg-white rounded-xl shadow-md p-6" data-aos="fade-up" data-aos-delay="100">
+                    <p class="text-sm font-light italic text-gray-600">
                         "様々な地域の豆を試せるのがいいですね。自分で選ぶ手間がなく、新しい出会いを楽しめるのが最高です。"
                     </p>
-                    <footer class="mt-4 text-right">
-                        <p class="font-semibold text-gray-800">- 40代 男性</p>
-                    </footer>
                 </div>
-                <div class="bg-orange-50 rounded-xl shadow-md p-9 flex flex-col" data-aos="fade-up" data-aos-delay="200">
-                    <p class="text-base font-light italic text-gray-600 flex-grow">
+                <div class="bg-white rounded-xl shadow-md p-6" data-aos="fade-up" data-aos-delay="200">
+                    <p class="text-sm font-light italic text-gray-600">
                         "鮮度が全然違います。淹れた瞬間の香りが部屋中に広がり、まるで焙煎所のようです。この品質でこの価格は信じられません。"
                     </p>
-                    <footer class="mt-4 text-right">
-                        <p class="font-semibold text-gray-800">- 20代 女性</p>
-                    </footer>
                 </div>
             </div>
         </section>
 
         <!-- よくある質問 -->
         <section class="mt-16 sm:mt-24 text-center">
-            <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-8" data-aos="fade-up">よくある質問</h2>
+            <h2 class="text-3xl sm:text-4xl font-bold mb-8" data-aos="fade-up">よくある質問</h2>
             <div class="max-w-3xl mx-auto text-left space-y-4">
                 <div class="bg-white rounded-xl shadow-md p-6" data-aos="fade-right">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Q. 解約はいつでもできますか？</h3>
-                    <p class="text-base text-gray-600">A. はい、いつでもオンラインで簡単に解約手続きが可能です。最低契約期間はありませんのでご安心ください。</p>
+                    <h3 class="text-lg font-semibold mb-2">Q. 解約はいつでもできますか？</h3>
+                    <p class="text-sm text-gray-600">A. はい、いつでもオンラインで簡単に解約手続きが可能です。最低契約期間はありませんのでご安心ください。</p>
                 </div>
                 <div class="bg-white rounded-xl shadow-md p-6" data-aos="fade-left">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Q. 配送日を選ぶことはできますか？</h3>
-                    <p class="text-base text-gray-600">A. はい、可能です。初回お申し込み時と、毎月のマイページからお届け日をご指定いただけます。</p>
+                    <h3 class="text-lg font-semibold mb-2">Q. 配送日を選ぶことはできますか？</h3>
+                    <p class="text-sm text-gray-600">A. はい、可能です。初回お申し込み時と、毎月のマイページからお届け日をご指定いただけます。</p>
                     <div id="calendar" class="mt-4">
                         <!-- カレンダーUIをここに実装 -->
                         <div class="w-full bg-gray-100 p-4 rounded-lg text-center">
@@ -265,40 +184,39 @@
                     </div>
                 </div>
                 <div class="bg-white rounded-xl shadow-md p-6" data-aos="fade-up">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Q. どのような支払い方法がありますか？</h3>
-                    <p class="text-base text-gray-600">A. クレジットカード（Visa, Mastercard, JCB, Amex）に対応しております。</p>
+                    <h3 class="text-lg font-semibold mb-2">Q. どのような支払い方法がありますか？</h3>
+                    <p class="text-sm text-gray-600">A. クレジットカード（Visa, Mastercard, JCB, Amex）に対応しております。</p>
                 </div>
             </div>
         </section>
 
         <!-- クロージング/再CTA -->
         <section class="mt-16 sm:mt-24 text-center bg-white p-8 rounded-2xl shadow-xl" data-aos="fade-up">
-            <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-4">
+            <h2 class="text-2xl sm:text-3xl font-bold mb-4">
                 今月の締め切りは<span class="text-orange-500">○月○日まで</span>！
             </h2>
             <p class="text-lg text-gray-600 mb-6">
                 多くのお客様に選ばれている<span class="font-bold text-orange-500">プレミアムプラン</span>なら、限定特典としてドリップバッグのおまけ付き！
             </p>
             <a href="#plans" class="inline-block px-10 py-4 bg-orange-500 text-white font-bold text-lg rounded-full shadow-lg hover:bg-orange-600 transition-all duration-300 transform hover:scale-105">
-                今すぐ始める
-            </a>
-        </section>
-
-    </main>
-
-    <footer class="text-center py-8 text-gray-500 text-sm">
-        <p>&copy; 2023 Real Dynamic. All Rights Reserved.</p>
-    </footer>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            AOS.init({
-                duration: 800,
-                once: true,
-                offset: 50,
-            });
-        });
-    </script>
-</body>
-</html>
-
+                        今すぐ始める
+                    </a>
+                </section>
+        
+            </main>
+        
+            <footer class="text-center py-8 text-gray-500 text-sm">
+                <p>&copy; 2023 Real Dynamic. All Rights Reserved.</p>
+            </footer>
+        
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    AOS.init({
+                        duration: 800,
+                        once: true,
+                        offset: 50,
+                    });
+                });
+            </script>
+        </body>
+        </html>
