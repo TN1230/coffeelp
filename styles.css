@@ -1,13 +1,14 @@
 body {
     font-family: 'Inter', sans-serif;
     color: #333;
-    /* 共通の背景画像に5%不透明の白を重ねるように変更 */
-    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('image/back-ground.jpg');
+    /* 共通の背景画像に80%不透明の白を重ね、透過度を20%に調整 */
+    background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('image/back-ground.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed; /* 背景を固定 */
 }
 
+/* アニメーション */
 @keyframes pulse {
     0%, 100% { transform: scale(1); }
     50% { transform: scale(1.05); }
@@ -21,7 +22,6 @@ body {
     25% { transform: rotate(5deg); }
     75% { transform: rotate(-5deg); }
 }
-
 .badge-wiggle-animation {
     animation: badge-wiggle 0.5s ease-in-out infinite alternate;
 }
@@ -36,28 +36,27 @@ body {
     box-shadow: 0 0 15px rgba(255, 165, 0, 0.7);
     transition: all 0.3s ease-in-out;
 }
-
 .premium-card:hover .glow-border {
     box-shadow: 0 0 30px rgba(255, 165, 0, 1), 0 0 50px rgba(255, 165, 0, 0.5);
     transform: scale(1.03);
 }
 
-/* Specific style for header paragraph for better readability */
+/* ヘッダーの段落 */
 header p {
-    color: rgba(255, 255, 255, 0.9); /* A slightly transparent white for readability */
+    color: rgba(255, 255, 255, 0.9); /* 可読性を高めるために少し透明な白色に */
 }
 
-/* Specific font for the main headline */
+/* メイン見出し */
 header h1 {
     font-family: 'Noto Serif JP', serif;
 }
 
-/* Section heading styles */
+/* セクション見出しスタイル */
 .section-heading {
     font-family: 'Noto Serif JP', serif;
     position: relative;
     display: inline-block;
-    padding-bottom: 8px; /* space for the underline */
+    padding-bottom: 8px;
 }
 
 .section-heading::after {
@@ -66,12 +65,12 @@ header h1 {
     bottom: 0;
     left: 0;
     height: 4px;
-    background-color: #F97316; /* Tailwind's orange-500 */
+    background-color: #F97316; /* Tailwindのorange-500 */
     width: 0;
     transition: width 1s ease-out;
 }
 
-/* Trigger the animation when the element is in view */
+/* アニメーションのトリガー */
 .section-heading.aos-animate::after {
     width: 100%;
 }
